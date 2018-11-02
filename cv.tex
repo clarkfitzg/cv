@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage{geometry}
+\geometry{margin=1in}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+
+\usepackage{biblatex}
+%\usepackage[backend=biber]{biblatex}
+\addbibresource{pubs.bib}
+
+\begin{document}
+\begin{center}
+        \huge\textbf{Clark Fitzgerald}
+\end{center}
+
+\section{Computer Skills}
+\LaTeX, PERL, Windows, Linux
+\section{Education}
+\textbf{Master of Arts in 2015} 
+for \textsc{Pigeons love doves}\par
+\textbf{Bachelor of Arts in 2013} 
+for \textsc{Pigeons in Cities}
+
+%\bibliography{pubs.bib}
+
+\nocite{*}
+\printbibliography[keyword=software, title={Software}]
+\printbibliography[keyword=talk, title={Conference Talks}]
+
+\end{document}
