@@ -1,12 +1,16 @@
 BIBFILES = $(wildcard *.bib)
 
-%.aux: %.tex $(BIBFILES)
-	pdflatex $<
-	bibtex $@
+%.pdf: %.tex
+	latexmk -pdf $<
 
-%.pdf: %.tex %.aux
-	pdflatex $<
-	pdflatex $<
 
+#%.aux: %.tex $(BIBFILES)
+#	pdflatex $<
+#	bibtex $@
+#
+#%.pdf: %.tex %.aux
+#	pdflatex $<
+#	pdflatex $<
+#
 clean:
-	rm *.aux *.bbl *.bcf *.blg *.log *.pdf
+	rm -f *.aux *.bbl *.bcf *.blg *.log *.pdf

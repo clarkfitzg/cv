@@ -4,9 +4,12 @@
 \setcounter{secnumdepth}{0}
 \setlength{\parindent}{0pt}
 
-\usepackage{biblatex}
-%\usepackage[backend=biber]{biblatex}
+%\usepackage{biblatex}
+\usepackage[backend=biber]{biblatex}
 \addbibresource{pubs.bib}
+
+\DeclareFieldFormat{labelnumberwidth}{}
+\setlength{\biblabelsep}{0pt}
 
 \begin{document}
 \begin{center}
@@ -24,6 +27,7 @@ for \textsc{Pigeons in Cities}
 %\bibliography{pubs.bib}
 
 \nocite{*}
+%\printbibliography
 \printbibliography[keyword=software, title={Software}]
 \printbibliography[keyword=talk, title={Conference Talks}]
 
